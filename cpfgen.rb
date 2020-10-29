@@ -4,7 +4,7 @@
 class Cpfgen < Formula
   desc ""
   homepage ""
-  url "https://github.com/rodrigorichter/cpfgen/archive/0.0.1.tar.gz"
+  url "https://github.com/rodrigorichter/cpfgen/archive/0.0.2.tar.gz"
   sha256 "3f2a2fe90ddd8f2bcab71b0878f020575f0c672a575de8e1b6f738f9290d5fda"
   license ""
 
