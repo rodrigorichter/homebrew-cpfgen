@@ -4,8 +4,8 @@
 class Cpfgen < Formula
   desc ""
   homepage ""
-  url "https://github.com/rodrigorichter/cpfgen/archive/0.0.2.tar.gz"
-  sha256 "6857eb8db08f71f356eff6ddb7e1ce9264cbd07a0f6295753a5c848930d3a2d5"
+  url "https://github.com/rodrigorichter/cpfgen/archive/0.0.3.tar.gz"
+  sha256 "d270c220c4515eeb50eadec4595af903dfa014b99fbfaa7aa400512a2bce5b18"
   license ""
 
   # depends_on "cmake" => :build
@@ -13,11 +13,7 @@ class Cpfgen < Formula
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
     # Remove unrecognized options if warned by configure
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
-    system "make", "install"
+    system "make", "install", "PREFIX=#{prefix}"
   end
 
   test do
