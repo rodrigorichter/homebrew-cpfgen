@@ -5,13 +5,15 @@ class Cpfgen < Formula
   desc ""
   homepage ""
   url "https://github.com/rodrigorichter/cpfgen/archive/0.0.2.tar.gz"
-  sha256 "3f2a2fe90ddd8f2bcab71b0878f020575f0c672a575de8e1b6f738f9290d5fda"
+  sha256 "6857eb8db08f71f356eff6ddb7e1ce9264cbd07a0f6295753a5c848930d3a2d5"
   license ""
 
   # depends_on "cmake" => :build
 
   def install
-    system "make", "install"
+    # ENV.deparallelize  # if your formula fails when building in parallel
+    # Remove unrecognized options if warned by configure
+    sytem "make", "install"
   end
 
   test do
