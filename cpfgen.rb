@@ -8,7 +8,7 @@ class Cpfgen < Formula
   sha256 "3f2a2fe90ddd8f2bcab71b0878f020575f0c672a575de8e1b6f738f9290d5fda"
   license ""
 
-  # depends_on "cmake" => :build
+  depends_on "cmake" => :build
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
@@ -17,7 +17,7 @@ class Cpfgen < Formula
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}"
-    # system "cmake", ".", *std_cmake_args
+    system "cmake", ".", *std_cmake_args
   end
 
   test do
